@@ -1,0 +1,66 @@
+{
+  "scope": "aux4",
+  "name": "system-installer-brew",
+  "description": "aux4 system installer for brew",
+  "version": "0.0.2",
+  "dependencies": [
+    "aux4/pkger"
+  ],
+  "tags": [
+    "aux4",
+    "system-installer"
+  ],
+  "profiles": [
+    {
+      "name": "aux4:pkger:system",
+      "commands": [
+        {
+          "name": "brew",
+          "execute": [
+            "profile:aux4:pkger:system:brew"
+          ],
+          "help": {
+            "text": "manage brew packages"
+          }
+        } 
+      ]
+    },
+    {
+      "name": "aux4:pkger:system:brew",
+      "commands": [
+        {
+          "name": "install",
+          "execute": [
+            "brew install ${package}"
+          ],
+          "help": {
+            "text": "install brew package",
+            "variables": [
+              {
+                "name": "package",
+                "text": "package name",
+                "arg": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "uninstall",
+          "execute": [
+            "brew uninstall ${package}"
+          ],
+          "help": {
+            "text": "uninstall brew package",
+            "variables": [
+              {
+                "name": "package",
+                "text": "package name",
+                "arg": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
