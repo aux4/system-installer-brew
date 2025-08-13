@@ -1,0 +1,18 @@
+{
+  "profiles": [
+    {
+      "name": "main",
+      "commands": [
+        {
+          "name": "build",
+          "execute": [
+            "log:building system installer brew"
+          ],
+          "help": {
+            "text": "Builds the system installer for brew"
+          }
+        }
+      ]
+    }
+  ]
+}
