@@ -2,7 +2,7 @@
   "scope": "aux4",
   "name": "system-installer-brew",
   "description": "aux4 system installer for brew",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": [
     "aux4/pkger"
   ],
