@@ -22,6 +22,15 @@
           "help": {
             "text": "manage brew packages"
           }
+        },
+        {
+          "name": "cask",
+          "execute": [
+            "profile:aux4:pkger:system:cask"
+          ],
+          "help": {
+            "text": "manage brew casks"
+          }
         }
       ]
     },
@@ -55,6 +64,43 @@
               {
                 "name": "package",
                 "text": "package name",
+                "arg": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "aux4:pkger:system:cask",
+      "commands": [
+        {
+          "name": "install",
+          "execute": [
+            "brew install --cask ${package}"
+          ],
+          "help": {
+            "text": "install brew cask",
+            "variables": [
+              {
+                "name": "package",
+                "text": "cask name",
+                "arg": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "uninstall",
+          "execute": [
+            "brew uninstall --cask ${package}"
+          ],
+          "help": {
+            "text": "uninstall brew cask",
+            "variables": [
+              {
+                "name": "package",
+                "text": "cask name",
                 "arg": true
               }
             ]
